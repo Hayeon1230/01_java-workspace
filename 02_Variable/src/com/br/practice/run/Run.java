@@ -4,9 +4,9 @@ public class Run {
 	public static void main(String[] args) {
 		
 		VariablePractice a = new VariablePractice();
-		a.method2();
+		a.method1();
 		System.out.print("\n");
-		a.method3();
+		a.method4();
 		
 		
 		
