@@ -55,14 +55,14 @@ public class OperatorPractice {
 		int class1 = sc.nextInt();
 		System.out.print("번호(숫자만) : ");
 		int num = sc.nextInt();
-		System.out.print("성별(M/F) : ");
 		sc.nextLine();
+		System.out.print("성별(M/F) : ");
 		char gender = sc.nextLine().charAt(0);
 		char gender2 = gender == 'M' || gender == 'm' ? '남' : '여';
 		System.out.print("성적(소수점 아래 둘째 자리까지) : ");
-		double score = sc.nextInt();
+		double score = sc.nextDouble();
 		
-		System.out.printf("%d학년 %d반 %d번 %c %c학생의 성적은 %f이다.",
+		System.out.printf("%d학년 %d반 %d번 %s %c학생의 성적은 %.2f이다.\n",
 				grade, class1, num, name, gender2, score);
 		
 	}
@@ -81,13 +81,19 @@ public class OperatorPractice {
 		int eng = sc.nextInt();
 		System.out.print("수학 : ");
 		int math = sc.nextInt();
-		int sum = kor + eng + math
+		int sum = kor + eng + math;
+		int average = sum / 3;
 		System.out.println("합계 : " + sum);
-		System.out.println("평균 : " + (sum/3));
-		
+		System.out.println("평균 : " + (average));
+		String result = average >= 60 ? "합격" : "불합격";
+		System.out.println(result);
 		
 	}
 	public void practice8() {
+		System.out.print("주민번호를 입력하세요(-포함) : ");
+		char num = sc.nextLine().charAt(8);
+		String result = num == '1' ? "남자" : "여자";
+		System.out.println(result);
 		
 	}
 }

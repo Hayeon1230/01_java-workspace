@@ -12,7 +12,9 @@ public class Run {
 //		o.practice3();
 //		o.practice4();
 //		o.practice5();
-		o.practice6();
+//		o.practice6();
+//		o.practice7();
+		o.practice8();
 		
 	}
 	
