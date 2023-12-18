@@ -78,20 +78,23 @@ public class ConditionPractice {
 		
 	public void practice5() {
 		String id = "aaa";//?
-		int pw = 1234;
+		String pwd = "1234";//전화번호 비밀번호 제일 앞자리 0도 들어가게 String으로
 		
-		System.out.println("아이디 : ");
+		System.out.print("아이디 : ");
 		String idin = sc.nextLine();
-		System.out.println("비밀번호 : ");
-		int pwin = sc.nextInt();
+		System.out.print("비밀번호 : ");
+		String pwdin = sc.nextLine();
 		
-		if(id == idin && pw == pwin) {
+		if(id.equals(idin) && pwd.equals(pwdin)) {
 			System.out.println("로그인 성공");
-		}else if(id == idin) {
+		}else if(id.equals(idin)) {
 				System.out.println("비밀번호가 틀렸습니다.");
-		}else {
+		}else if(pwd.equals(pwdin)){
 				System.out.println("아이디가 틀렸습니다.");
-		}
+		}else {
+			System.out.println("둘 다 틀렸습니다.");
+		}// result에 담아놓고 출력은 마지막에만 쓸 수도!
+		// 초기값에 "둘 다 틀렸습니다"로 설정하면, 더 간결
 		
 		
 	}
@@ -102,10 +105,76 @@ public class ConditionPractice {
 		System.out.println("");
 	}
 	public void practice8() {
-		System.out.println("");
+		System.out.print("피연산자1 입력 : ");
+		int num1 = sc.nextInt();
+		System.out.print("피연산자2 입력 : ");
+		int num2 = sc.nextInt();
+		
+		sc.nextLine(); //기억하자!
+		System.out.print("연산자를 입력(+,-,*,/,%) : ");
+		char op = sc.nextLine().charAt(0);
+		
+		if(num1 > 0 && num2 > 0) {
+			int result = 0;
+			switch(op) {
+			case '+' : result = num1 + num2; break;
+			case '-' : result = num1 - num2; break;
+			case '*' : result = num1 * num2; break;
+			case '/' : result = num1 / num2; break;
+			case '%' : result = num1 % num2; break;
+			default : System.out.println("연산자 확인"); return; //return 안하면 틀려도 밑에꺼 나옴
+			}
+			System.out.printf("%d %c %d = %d", num1,op,num2,result);
+		}else {
+			System.out.println("잘못 입력하셨습니다. 프로그램을 종료합니다.");
+		}
+		
+		
 	}
 	public void practice9() {
 		System.out.println("");
 	}
+	public void practice10() {
+		System.out.print("중간고사 점수 : ");
+		double mid = sc.nextInt() * 0.3; // 30%반영한 점수
+		System.out.print("기말고사 점수 : ");
+		double fin = sc.nextInt() * 0.3;
+		System.out.print("과제 점수 : ");
+		double task = sc.nextInt() * 0.2;
+		System.out.print("출석 횟수 : ");
+		double att = sc.nextInt();
+
+		System.out.println("중간고사 점수(30) : " + mid);
+		System.out.println("기말고사 점수(30) : "+ fin);
+		System.out.println("과제 점수(20) : " + task);
+		System.out.println("출석 횟수(20) : " + att);
+		
+		double score = mid + fin + task + att;
+		System.out.printf("총점 : %.1f\n\n", score);
+		
+		
+		
+		if(score >= 80 && att >= (20*0.8)) {
+			System.out.println("Pass");}
+		/*	else if(score >= 80 && att < (20*0.8)) {
+				System.out.printf("Fail [출석 횟수 부족] (%d/20)", (int)att);
+				
+			}else if(score < 80 && att >= (20*0.8)) {
+				System.out.printf("Fail [점수 미달] )총점 %.1f점", score);
+			}else {
+				System.out.printf("Fail [출석 횟수 부족] (%d/20)", att);
+				System.out.printf("Fail [점수 미달] )총점 %.1f점", score);
+			}
+		*/
+		if(score < 80) {//총점이 미달일 경우
+			System.out.printf("Fail [점수 미달] )총점 %.1f\n점", score);
+		}
+		if(att < 20 *0.8) {//출석률이 부족할 경우
+			System.out.printf("Fail [출석 횟수 부족] (%d/20)", att);
+		}
+	}// 둘 다 부족하면, 위의 두 이프문 둘 다 출력될 것
+	// 그래서 세트로 안묶고 단독이프 쓰면, else문 쓸 필요 없음
+	
+	
 	
 }
