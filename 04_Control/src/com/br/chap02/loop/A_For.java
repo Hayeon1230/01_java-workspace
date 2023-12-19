@@ -191,10 +191,15 @@ public class A_For {
 
 		// 마지막인덱스수 == 문자열의 길이 -1
 		// 0번인덱스에서부터 (문자열의 길이-1)인덱스까지 매번 1씩증가
-
+		int i = 0;
+		while(i <= str.length()) {
+			System.out.println(str.charAt(i++));
+		}
+		/*
 		for (int i = 0; i < str.length(); i++) {
 			System.out.println(str.charAt(i));
 		}
+		*/
 
 	}
 
@@ -305,24 +310,35 @@ public class A_For {
 			}
 		}
 	}
-	
+
 	public void method17() {
 		/*
-		 * 0시 0분
-		 * 0시 1분
-		 * ...
-		 * 0시 59분
+		 * 0시 0분 0시 1분 ... 0시 59분
 		 * 
-		 * 1시 0분
-		 * ...
-		 * 1시 59분
-		 * ...
-		 * 23시 59분
+		 * 1시 0분 ... 1시 59분 ... 23시 59분
 		 * 
 		 */
-		for(int i=0; i<=23; i++) {
-			for(int j=0; j<=59; j++) {
-				System.out.printf("%d시 %d분\n",i,j);
+		for (int i = 0; i <= 23; i++) {
+			for (int j = 0; j <= 59; j++) {
+				System.out.printf("%d시 %d분\n", i, j);
+			}
+			System.out.println();
+		}
+	}
+
+	public void homework() {
+		for (int i = 1; i <= 5; i++) {
+			for (int j = 1; j <= 10; j++) {
+				if (i == 1 || i == 5) { // 첫번째 또는 마지막 행
+					System.out.print("*");
+				} else {
+					if (j == 1 || j == 10) {
+						System.out.print("*");
+					} else {
+						System.out.print(" ");
+					}
+
+				}
 			}
 			System.out.println();
 		}

@@ -132,7 +132,37 @@ public class ConditionPractice {
 		
 	}
 	public void practice9() {
-		System.out.println("");
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+			System.out.println("실행할 기능을 선택하세요.");
+			System.out.println("1. ");
+			System.out.println("2. ");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			
+			System.out.print("선택 : ");
+			int menu = sc.nextInt();
+			
+			switch(menu) {
+			case 1: practice1(); break;
+			case 2: practice2(); break;
+			case 3: practice3(); break;
+			case 4: practice4(); break;
+			case 5: practice5(); break;
+			case 6: practice6(); break;
+			case 7: practice7(); break;
+			case 8: practice8(); break;
+			case 0: 
+			}
+		}
+		
+		
+		
+		
 	}
 	public void practice10() {
 		System.out.print("중간고사 점수 : ");

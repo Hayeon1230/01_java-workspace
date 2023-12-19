@@ -17,6 +17,24 @@ public class LoopPractice {
 		}
 	}
 
+	public void practice2() {//?
+		System.out.println("1 이상 정수 : ");
+		int num = sc.nextInt();
+		
+		for (int i = 1; i <= num; i++) {
+			if (num < 1) {
+				
+				System.out.println("잘못 입력했습니다. 다시 입력해주세요.");
+				continue;
+				
+			} else {
+				System.out.print(i + " ");
+
+			}
+
+		}
+	}
+
 	public void practice3() {
 		System.out.println("1 이상의 숫자를 입력하세요 : ");
 		int num = sc.nextInt();
@@ -27,6 +45,10 @@ public class LoopPractice {
 		} else {
 			System.out.println("잘못 입력하셨습니다.");
 		}
+	}
+	
+	public void practice4() {
+		
 	}
 
 	public void practice5() {
@@ -104,8 +126,8 @@ public class LoopPractice {
 		int start = sc.nextInt();
 		System.out.println("공차 : ");
 		int dif = sc.nextInt();
-		
-		for(int i=start; i<=(start+dif*9);i+=dif) {
+
+		for (int i = start; i <= (start + dif * 9); i += dif) {
 			System.out.println(i);
 		}
 	}
