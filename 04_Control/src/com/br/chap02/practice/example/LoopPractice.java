@@ -17,18 +17,21 @@ public class LoopPractice {
 		}
 	}
 
-	public void practice2() {//?
-		System.out.println("1 이상 정수 : ");
-		int num = sc.nextInt();
+	public void practice2() {// ?
 		
-		for (int i = 1; i <= num; i++) {
+		while (true) {
+			System.out.println("1 이상 정수 : ");
+			int num = sc.nextInt();
 			if (num < 1) {
-				
+
 				System.out.println("잘못 입력했습니다. 다시 입력해주세요.");
 				continue;
-				
 			} else {
-				System.out.print(i + " ");
+				for (int i = 1; i <= num; i++) {
+
+					System.out.print(i + " ");
+					System.out.println();					
+				}
 
 			}
 
@@ -46,9 +49,9 @@ public class LoopPractice {
 			System.out.println("잘못 입력하셨습니다.");
 		}
 	}
-	
+
 	public void practice4() {
-		
+
 	}
 
 	public void practice5() {
@@ -67,6 +70,24 @@ public class LoopPractice {
 			}
 			System.out.print("=" + sum);
 		}
+
+	}
+
+	public void practice5_2() {
+		System.out.println("정수 입력 :");
+		int num = sc.nextInt();
+		int sum = 0;
+
+		for (int i = 1; i <= num; i++) {
+			System.out.print(i);
+			if (i == num) {
+				System.out.print("=");
+			} else {
+				System.out.print("+");
+			}
+			sum = sum + i;
+		}
+		System.out.print(sum);
 	}
 
 	public void practice6() {// ?
@@ -128,8 +149,75 @@ public class LoopPractice {
 		int dif = sc.nextInt();
 
 		for (int i = start; i <= (start + dif * 9); i += dif) {
-			System.out.println(i);
+			System.out.print(i + " ");
 		}
+	}
+
+	public void practice12() {
+
+		Scanner sc = new Scanner(System.in);
+		/*
+		 * 무한반복{ 1. 연산자 입력받기 2. 정수 두개 입력받기 3. 연산기호에 따라 그에 맞는 연산결과 출력 }
+		 * 
+		 */
+
+		while (true) {
+			// 1. 연산자 입력받기
+			System.out.print("연산자(+,-,*,/,%) : ");
+			String op = sc.nextLine();
+
+			// >> 사용자가 입력한 연산자가 "exit"일 경우
+			//	  => "프로그램 종료" 출력 후 반복문 종료
+			if(op.equals("exit")) {
+				System.out.println("프로그램을 종료합니다.");
+				break;
+			}
+			
+			// 2. 정수 두개 입력받기
+			System.out.print("정수1 : ");
+			int num1 = sc.nextInt();
+			System.out.print("정수2 : ");
+			int num2 = sc.nextInt();
+			sc.nextLine();
+
+			// >> 연산자가 "/"거나 "%"일 때
+			//	  두번째 정수값이 0일 경우
+			//    => "0으로 나눌수없음, 다시 입력" 출력 후 => 반복문 위로 올라감
+			if((op.equals("/") || op.equals("%")) && num2 == 0) {
+				//&&이 ||보다 먼저 연산됨 => 그래서 괄호 없으면 /만 있어도 아래 문구 출력됨
+				System.out.println("0으로 나눌 수 없습니다. 다시입력해주세요.\n");
+				continue;
+			}
+			
+			
+			// 3. 연산기호에 따른 결과 출력
+			// 단, 연산기호를 잘못 입력했을 경우 => "없는 연산자, 다시 입력" 출력 =>반복문 위로 올라감
+			int result = 0;
+			switch (op) {
+			case "+":
+				result = num1 + num2;
+				break;
+			case "-":
+				result = num1 - num2;
+				break;
+			case "*":
+				result = num1 * num2;
+				break;
+			case "/":
+				result = num1 / num2;
+				break;
+			case "%":
+				result = num1 % num2;
+				break;
+			default:
+				System.out.println("없는 연산자입니다. 다시 입력해주세요.\n");
+				continue;
+			}
+
+			System.out.printf("%d %s %d = %d\n\n", num1, op, num2, result);
+
+		}
+
 	}
 
 }
