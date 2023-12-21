@@ -327,7 +327,7 @@ public class A_Array {
 		// 3. 문자열의 각 인덱스별 문자값을 char배열의 각 인덱스 자리에 대입
 		for (int i = 0; i < str.length(); i++) {
 			arr[i] = str.charAt(i);
-			
+
 		}
 		// 4. 해당 배열의 모든 인덱스에 담긴 값을 출력
 		for (int i = 0; i < str.length(); i++) {
@@ -335,27 +335,70 @@ public class A_Array {
 		}
 
 	}
-	
+
 	public void homework() {
 		String str = "GDKKN";
-		//위와 같은 문자열이 있는데 각 문자마다 +1된 문자열(HELLO)
-		//해당 결과값을 String result에 기록하시오. =>출력
+		// 위와 같은 문자열이 있는데 각 문자마다 +1된 문자열(HELLO)
+		// 해당 결과값을 String result에 기록하시오. =>출력
 
 		// 2. char배열 생성해두기(배열의 크기 == 문자열의 길이)
 		char[] arr = new char[str.length()];
 
 		// 3. 문자열의 각 인덱스별 문자값을 char배열의 각 인덱스 자리에 대입
 		for (int i = 0; i < str.length(); i++) {
-			arr[i] = (char)(str.charAt(i)+1);
-			
-			
+			arr[i] = (char) (str.charAt(i) + 1);
+
 		}
 		// 4. 해당 배열의 모든 인덱스에 담긴 값을 출력
 		for (int i = 0; i < str.length(); i++) {
 			System.out.print(arr[i]);
 		}
-		
-		
+
+	}
+
+	public void homework2() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("문자열 : ");
+		String str = sc.nextLine();
+		// 위와 같은 문자열이 있는데 각 문자마다 +1된 문자열(HELLO)
+		// 해당 결과값을 String result에 기록하시오. =>출력
+
+		// 2. char배열 생성해두기(배열의 크기 == 문자열의 길이)
+
+		// 2. 해당 배열에 각 문자들을 담을 때 +1 처리해서 그다음 알파벳
+
+		for (int i = 0; i < str.length(); i++) {
+			arr[i] = (char) (str.charAt(i) + 1);
+
+		}
+		// 해당 결과값을 String result에 기록 출력도
+		// 3. 문자열의 각 인덱스별 문자값을 char배열의 각 인덱스 자리에 대입
+
+		// 4. 해당 배열의 모든 인덱스에 담긴 값을 출력
+		String result = "";
+		for (int i = 0; i < str.length(); i++) {
+			result += arr[i];
+		}
+		System.out.println(result);
+	}
+
+	public void remind() {
+		// 변수 : 오로지 한개의 값만
+		// 배열 : 여러개의 값(단, 같은 자료형끼리만)
+
+		int[] arr = new int[5];
+		arr[0] = 1;
+		arr[1] = 10;
+		arr[2] = 20;
+		arr[3] = 30;
+		arr[4] = 40;
+
+		int sum = 0;
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println(arr[i]);
+			sum += arr[i];
+		}
+		System.out.println(sum);
 	}
 
 }
