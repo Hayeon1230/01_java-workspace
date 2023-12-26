@@ -14,10 +14,11 @@ public class RemindRun {
 		 * 
 		 */
 		
+		
 		// 객체생성 과정(== 인스턴스화 한다) 자바에서의 객체 == 인스턴스
-		Snack sumi = new Snack();
+		/*Snack sumi = new Snack();
 		sumi.setsName("수미칩"); // 해당함수 매개변수에 "수미칩"담긴 후 sName 필드에 담기고, 중괄호 끝나고, 호출했던 이 메소드 자리로 돌아오고 다음코드 진행
-		sumi.setBrand("농심");
+		//sumi.setBrand("농심");
 		sumi.setPrice(1000);
 		sumi.setKcal(400);
 		// 꼭 모든 필드를 채울 필요는 없음 신제품이라 가격미정? 해당 줄 없어도 됨
@@ -33,15 +34,30 @@ public class RemindRun {
 		//String sName = sc.nextLine();
 		//meok.setsName(sName);
 		meok.setsName(sc.nextLine());
-		System.out.print("등록하고자 하는 과자의 브랜드명 : ");
-		meok.setBrand(sc.nextLine());
+		//System.out.print("등록하고자 하는 과자의 브랜드명 : ");
+		//meok.setBrand(sc.nextLine());
 		System.out.println("등록하고자 하는 과자의 가격 : ");
 		meok.setPrice(sc.nextInt());
 		System.out.println("등록하고자 하는 과자의 칼로리 : ");
 		meok.setKcal(sc.nextInt());
 		
 		System.out.println(meok.information());
+		System.out.println("회사명 : " + Snack.BRAND);
+		*/
+		// 매개변수 생성자를 활용
+		Snack sumi = new Snack("수미칩", 1000, 400);
+		System.out.println(sumi.information());
 		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("과자명 : ");
+		String sName = sc.nextLine();
+		System.out.print("가격 : ");
+		int price = sc.nextInt();
+		System.out.print("칼로리 : ");
+		int kcal = sc.nextInt();
+		
+		Snack meok = new Snack(sName, price, kcal);
+		System.out.println(meok.information());
 		
 		
 	}

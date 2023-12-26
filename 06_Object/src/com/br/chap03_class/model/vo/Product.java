@@ -6,6 +6,19 @@ public class Product {
 	private int price;
 	private String brand;
 	
+	// 기본생성자 (매개변수 없는 생성자)
+	public Product() {
+		//객체 생성만
+	}
+	//매개변수 3개짜리 생성자(객체 생성과 동시에 각 필드에 값 초기화)
+	public Product(String pName, int price, String brand) {
+		this.pName = pName;
+		this.price = price;
+		this.brand = brand;
+	}
+	
+	// * setter 메소드
+	/*
 	public void setPName(String pName) {
 		this.pName = pName;
 	}
@@ -16,6 +29,7 @@ public class Product {
 		this.brand = brand;
 	}
 	
+	// * getter 메소드
 	public String getPName(){
 		return pName;
 	}
@@ -30,5 +44,5 @@ public class Product {
 		String result = "pName : " + pName + "price : " + price + "brand : " + brand;
 		return result;
 	}
-	
+	*/
 }

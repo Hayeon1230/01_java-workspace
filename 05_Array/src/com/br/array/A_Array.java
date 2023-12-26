@@ -367,6 +367,7 @@ public class A_Array {
 
 		// 2. 해당 배열에 각 문자들을 담을 때 +1 처리해서 그다음 알파벳
 
+		char[] arr = null;
 		for (int i = 0; i < str.length(); i++) {
 			arr[i] = (char) (str.charAt(i) + 1);
 
