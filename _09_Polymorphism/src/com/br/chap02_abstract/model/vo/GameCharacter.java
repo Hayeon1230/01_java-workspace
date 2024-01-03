@@ -1,15 +1,16 @@
 package com.br.chap02_abstract.model.vo;
 
 public abstract class GameCharacter {
-	
+
 	private String name;
 	private int hp;
 	private int level;
 	private int exp;
 	
 	public GameCharacter() {}
-
+	
 	// alt+shift+s > o > Enter
+	
 	public GameCharacter(String name, int hp, int level, int exp) {
 		super();
 		this.name = name;
@@ -17,8 +18,8 @@ public abstract class GameCharacter {
 		this.level = level;
 		this.exp = exp;
 	}
-
 	// alt+shift+s > r > alt+a > alt+r
+
 	public String getName() {
 		return name;
 	}
@@ -54,20 +55,11 @@ public abstract class GameCharacter {
 	// alt+shift+s > s > Enter
 	@Override
 	public String toString() {
-		return "name=" + name + ", hp=" + hp + ", level=" + level + ", exp=" + exp;
+		return "GameCharacter [name=" + name + ", hp=" + hp + ", level=" + level + ", exp=" + exp + "]";
 	}
-
-	
-	public abstract void attack();
-	public abstract void defence();
-	
-
-	
-
 	
 	
 	
 	
 	
-
 }

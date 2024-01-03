@@ -1,11 +1,10 @@
 package com.br.chap02_abstract.model.vo;
 
 public abstract class Sports {
-	
+
 	private int peopleCount; // 참여인원수
 	
 	public Sports() {}
-	
 	public Sports(int peopleCount) {
 		this.peopleCount = peopleCount;
 	}
@@ -13,7 +12,6 @@ public abstract class Sports {
 	public int getPeopleCount() {
 		return peopleCount;
 	}
-	
 	public void setPeopleCount(int peopleCount) {
 		this.peopleCount = peopleCount;
 	}
@@ -27,5 +25,5 @@ public abstract class Sports {
 	public abstract void rule();
 	// 미완성된 메소드 == 추상메소드 == abstract 예약어 기술해야됨
 	// 단, 추상메소드가 존재하는 클래스라면 반드시 추상클래스로 선언해야됨
-
+	
 }
