@@ -16,27 +16,27 @@ public class RemindRun {
 		System.out.println(bk1.information());
 		System.out.println(bk2.information());
 		
-		System.out.println("=================");
+		System.out.println("=========================");
 		
 		int[] arr = new int[3];
+		// arr    == type : int[]
 		// arr[0] == type : int
 		// arr[1] == type : int
 		// arr[2] == type : int
-		
 		arr[0] = 10;
 		arr[1] = 15;
 		arr[2] = 20;
 		
 		Book[] books = new Book[3];
-		// books	== type : Book[]
-		// books[0] == type : Book
-		// books[1] == type : Book
-		// books[2] == type : Book
+		// books   == type : Book[]
+		// books[0]== type : Book
+		// books[1]== type : Book
+		// books[2]== type : Book
 		books[0] = new Book();
 		books[0].setTitle("파이썬");
 		books[0].setAuthor("홍길동");
 		
-		books[1] = bk2;// 주소값을 대입 (bk2의 주소가 books[1]에)
+		books[1] = bk2; // 주소값을 대입 (bk2가 0X123였다면 books[1]도 0X123 동일한 주소)
 		
 		books[2] = new Book("도커", "이말순", 40000, "길벗");
 		
@@ -44,13 +44,16 @@ public class RemindRun {
 		System.out.println(books[0]); // Book 타입
 		
 		for(int i=0; i<books.length; i++) {
-			System.out.println(books[i].information());
+			System.out.println(books[i].information());			
 		}
 		
+		System.out.println("=======================");
 		
+		books[1].setPrice(15000);
+		System.out.println(books[1].information());
 		
-		
-				
+		System.out.println(bk2.information());
+
 	}
 
 }

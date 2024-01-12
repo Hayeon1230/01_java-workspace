@@ -39,12 +39,13 @@ public class Warrior extends GameCharacter {
 	@Override
 	public void attack() {
 		System.out.println(weapon + "과 같은 무기를 휘두르면서 공격한다.");
+		setExp(getExp() + 10);
 	}
 
 	@Override
 	public void defence() {
 		System.out.println("방패를 이용해서 방어한다.");
-		super.setHp(super.getHp() - 2);
+		setHp(getHp() - 2);
 	}
 	
 	

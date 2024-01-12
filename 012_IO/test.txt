@@ -1,0 +1,1 @@
+Phone [name=갤럭시, price=1000000]

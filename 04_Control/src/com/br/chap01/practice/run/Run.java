@@ -1,16 +1,11 @@
 package com.br.chap01.practice.run;
 
-import com.br.chap01.practice.example.ConditionPractice;
+import com.br.chap01.practice.example.ConditionPracticeAnswer;
 
 public class Run {
 
 	public static void main(String[] args) {
-		ConditionPractice p = new ConditionPractice();
-//		p.practice1();
-//		p.practice2();
-		p.practice10();
-		
-		
+		new ConditionPracticeAnswer().practice9();
 	}
-	
+
 }

@@ -1,22 +1,12 @@
 package com.br.practice.run;
 
-import com.br.practice.example.OperatorPractice;
+import com.br.practice.example.OperatorPracticeAnswer;
 
 public class Run {
-
+	
 	public static void main(String[] args) {
-		
-		OperatorPractice o = new OperatorPractice();
-//		o.practice1();
-//		o.practice2();
-//		o.practice3();
-//		o.practice4();
-//		o.practice5();
-//		o.practice6();
-//		o.practice7();
-		o.practice8();
-		
+		OperatorPracticeAnswer op = new OperatorPracticeAnswer();
+		op.practice8();
 	}
-	
-	
+
 }

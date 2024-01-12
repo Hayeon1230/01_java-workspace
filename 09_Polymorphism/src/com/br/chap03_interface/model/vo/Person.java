@@ -1,11 +1,13 @@
 package com.br.chap03_interface.model.vo;
 
 public abstract class Person {
-
+	
 	private String name;
 	private double weight;
 	private int health;
 	
+	public Person() {}
+
 	public Person(String name, double weight, int health) {
 		super();
 		this.name = name;
@@ -37,11 +39,11 @@ public abstract class Person {
 		this.health = health;
 	}
 
-	
 	@Override
 	public String toString() {
-		return super.toString() + "Person [name=" + name + ", weight=" + weight + ", health=" + health + "]";
+		return "name=" + name + ", weight=" + weight + ", health=" + health;
 	}
 	
 	
+
 }

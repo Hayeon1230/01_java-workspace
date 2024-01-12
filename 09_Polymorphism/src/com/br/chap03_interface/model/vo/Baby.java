@@ -2,16 +2,17 @@ package com.br.chap03_interface.model.vo;
 
 public class Baby extends Person implements Basic{
 
+	public Baby() {
+		super();
+	}
+
 	public Baby(String name, double weight, int health) {
 		super(name, weight, health);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public String toString() {
-		return "Baby [getName()=" + getName() + ", getWeight()=" + getWeight() + ", getHealth()=" + getHealth()
-				+ ", toString()=" + super.toString() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ "]";
+		return "Baby [" + super.toString() + "]";
 	}
 
 	@Override
@@ -28,5 +29,5 @@ public class Baby extends Person implements Basic{
 	}
 	
 	
-
+	
 }
